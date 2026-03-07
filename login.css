@@ -1,0 +1,160 @@
+/* =========================================
+   1. GLOBAL & BODY SETTINGS
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f7f4; /* soft mint background */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* =========================================
+   2. THE LOGIN CARD
+   ========================================= */
+.login-card {
+    background: white;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid #f3f4f6;
+}
+
+/* =========================================
+   3. LARGE LOGO (LOGIN VERSION)
+   ========================================= */
+.logo-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.logo-pin-large {
+    width: 60px;
+    height: 60px;
+    background-color: #2d5a43;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.pill-white-large {
+    width: 24px;
+    height: 12px;
+    background-color: white;
+    border-radius: 12px;
+    transform: rotate(45deg);
+}
+
+.brand-text {
+    font-size: 28px;
+    letter-spacing: -1px;
+}
+
+.brand-med { color: #2d5a43; font-weight: 700; }
+.brand-insta { color: #000000; font-weight: 400; text-transform: lowercase; }
+
+/* =========================================
+   4. FORM INPUTS & LABELS
+   ========================================= */
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+}
+
+.input-field {
+    width: 100%;
+    padding: 14px 14px 14px 45px;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.input-field:focus {
+    border-color: #2d5a43;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(45, 90, 67, 0.1);
+}
+
+/* =========================================
+   5. BUTTONS & LINKS
+   ========================================= */
+.login-submit {
+    width: 100%;
+    background-color: #2d5a43;
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.login-submit:hover {
+    background-color: #1e3d2d;
+    transform: translateY(-1px);
+}
+
+.forgot-link {
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    color: #2d5a43;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.signup-footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #f3f4f6;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.signup-footer a {
+    color: #2d5a43;
+    font-weight: 800;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.back-home {
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #9ca3af;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
