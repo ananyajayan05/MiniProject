@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>{{ condition }} Medicines</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+<body class="bg-gray-100">
+
+<div class="container mx-auto py-10">
+
+<h1 class="text-3xl font-bold mb-6 text-center">
+{{ condition }} Medicines
+</h1>
+
+<div class="grid md:grid-cols-3 gap-6">
+
+{% for med in medicines %}
+
+<div class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
+
+<h2 class="font-bold text-lg">{{ med.name }}</h2>
+
+<p class="text-blue-600 text-sm font-semibold">
+{{ med.generic }}
+</p>
+
+<p class="font-bold text-xl mt-2">
+₹{{ med.price }}
+</p>
+
+<p class="text-sm text-gray-500 mt-2">
+<i class="fa-solid fa-store mr-1"></i> {{ med.pharmacy }}
+</p>
+
+<a
+href="https://www.google.com/maps/search/{{ med.pharmacy }}"
+target="_blank"
+class="block mt-4 bg-green-700 text-white text-center py-2 rounded-lg hover:bg-green-800 transition"
+>
+<i class="fa-solid fa-location-dot mr-2"></i> Open in Maps
+</a>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+<div class="text-center mt-10">
+
+<a href="/" class="bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition">
+Back to Home
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
