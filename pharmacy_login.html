@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Login | MEDinsta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f0f7f4]">
+
+<div class="min-h-screen flex items-center justify-center px-4">
+
+    <form method="POST" action="/pharmacy-login" class="bg-white p-8 rounded-xl shadow-md max-w-md w-full">
+
+        <h2 class="text-3xl font-bold mb-6 text-center text-gray-800">Pharmacy Login</h2>
+
+        <!-- ERROR MESSAGE -->
+        {% if error %}
+        <p class="text-red-600 font-bold mb-4 text-center">{{ error }}</p>
+        {% endif %}
+
+        <!-- Input names MUST match Flask backend -->
+        <input type="email" name="email" placeholder="Email" class="border p-3 w-full mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" required>
+        <input type="password" name="password" placeholder="Password" class="border p-3 w-full mb-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" required>
+        
+        <button type="submit" class="bg-purple-600 text-white px-4 py-3 rounded-lg w-full hover:bg-purple-700 transition font-semibold">
+            Login
+        </button>
+        
+        <p class="text-center text-sm mt-6 text-gray-600">
+            Don't have an account? 
+            <a href="/pharmacy-register" class="text-purple-600 font-bold hover:underline">Register here</a>
+        </p>
+
+    </form>
+
+</div>
+
+</body>
+</html>
